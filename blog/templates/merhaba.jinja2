@@ -1,0 +1,11 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+<div class="ss">
+  <h1>Merhaba Pyramid</h1>
+  <p>{{project}}</p>
+  {% for list in liste%}
+    {{list}}
+  {%endfor%}
+</div>
+{% endblock content %}
