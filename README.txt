@@ -1,4 +1,5 @@
-Burada yapmak istediğimiz yeni bir pyramid projesi nasıl oluşturulur ve pyramid frameworkü ile blog sayfası yapmak.
+<b>Burada yapmak istediğimiz yeni bir pyramid projesi nasıl oluşturulur ve pyramid frameworkü ile blog sayfası yapmak.
+</b>
 ====
 
 Getting Started
