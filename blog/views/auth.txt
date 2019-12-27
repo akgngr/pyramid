@@ -1,0 +1,46 @@
+from pyramid.view import view_config, forbidden_view_config
+from pyramid.response import Response
+from pyramid.httpexceptions import HTTPForbidden
+from pyramid.httpexceptions import HTTPFound
+
+@forbidden_view_config()
+def forbidden_view(request):
+    # do not allow a user to login if they are already logged in
+    if request.authenticated_userid:
+        return HTTPForbidden()
+
+    loc = request.route_url('login', _query=(('next', request.path),))
+    return HTTPFound(location=loc)
+
+@view_config(
+    route_name='login',
+    renderer='login.mako',
+)
+def login_view(request):
+    next = request.params.get('next') or request.route_url('home')
+    login = ''
+    did_fail = False
+    if 'submit' in request.POST:
+        login = request.POST.get('login', '')
+        passwd = request.POST.get('passwd', '')
+
+        user = USERS.get(login, None)
+        if user and user.check_password(passwd):
+            headers = remember(request, login)
+            return HTTPFound(location=next, headers=headers)
+        did_fail = True
+
+    return {
+        'login': login,
+        'next': next,
+        'failed_attempt': did_fail,
+        'users': USERS,
+    }
+
+@view_config(
+    route_name='logout',
+)
+def logout_view(request):
+    headers = forget(request)
+    loc = request.route_url('home')
+    return HTTPFound(location=loc, headers=headers)
