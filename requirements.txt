@@ -29,8 +29,6 @@ legacy==0.1.6
 Mako==1.1.0
 MarkupSafe==1.1.1
 more-itertools==8.0.2
-# Editable install with no version control (myblog==0.0)
--e /Users/akgngr/Documents/Python/django/myblog
 packaging==19.2
 paginate==0.5.6
 paginate-sqlalchemy==0.3.0
