@@ -3,7 +3,7 @@ import os
 from setuptools import setup, find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'README.txt')) as f:
+with open(os.path.join(here, 'README.md')) as f:
     README = f.read()
 with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
@@ -11,6 +11,7 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
 requires = [
     'plaster_pastedeploy',
     'pyramid',
+    'pyramid-mako',
     'pyramid_jinja2',
     'pyramid_debugtoolbar',
     'waitress',
@@ -20,6 +21,11 @@ requires = [
     'SQLAlchemy',
     'transaction',
     'zope.sqlalchemy',
+    'deform',
+    'wtforms==2.2.1',  # form library
+    'webhelpers2==2.0',  # various web building related helpers
+    'paginate==0.5.6', # pagination helpers
+    'paginate_sqlalchemy==0.3.0'
 ]
 
 tests_require = [

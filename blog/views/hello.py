@@ -7,3 +7,10 @@ from pyramid.response import Response
 )
 def home(request):
     return { 'mesaj':'Hello World!' }
+
+@view_config(
+    route_name='test-hello',
+    renderer='json'
+)
+def testhello(request):
+    return{'content': 'Hello!'}

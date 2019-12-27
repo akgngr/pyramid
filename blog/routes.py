@@ -4,3 +4,4 @@ def includeme(config):
     config.add_route('merhaba', '/merhaba')
     config.add_route('api', '/api')
     config.add_route('hello', '/helloworld')
+    config.add_route('test-hello','/test-hello')
