@@ -26,7 +26,7 @@ itsdangerous==1.1.0
 Jinja2==2.10.3
 jinja2-time==0.2.0
 legacy==0.1.6
-Mako==1.1.0
+Mako==1.2.2
 MarkupSafe==1.1.1
 more-itertools==8.0.2
 # Editable install with no version control (myblog==0.0)
