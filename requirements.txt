@@ -7,7 +7,7 @@ automium-web==0.1.1
 beautifulsoup4==4.8.1
 binaryornot==0.4.4
 -e git+https://github.com/akgngr/pyramid.git@66e1cd1c1ec042f1ff0099e2b2d6e27cb2cdf101#egg=blog
-certifi==2019.11.28
+certifi==2022.12.7
 Chameleon==3.6.2
 chardet==3.0.4
 Click==7.0
