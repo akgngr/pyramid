@@ -71,7 +71,7 @@ wcwidth==0.1.7
 WebHelpers2==2.0
 WebOb==1.8.5
 WebTest==2.0.33
-Werkzeug==0.16.0
+Werkzeug==2.2.3
 whichcraft==0.6.1
 WTForms==2.2.1
 zope.deprecation==4.4.0
